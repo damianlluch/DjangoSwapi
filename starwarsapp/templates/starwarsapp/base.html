@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  {% block styles %}{% endblock %}
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Star Wars</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="{% url 'home' %}" style="color: white">Home</a></li>
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+           role="button" aria-haspopup="true" aria-expanded="false">Films <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="{% url 'film-create' %}">Create</a></li>
+          <li><a href="{% url 'film-list' %}">List</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+           role="button" aria-haspopup="true" aria-expanded="false">Characters <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="{% url 'people-create' %}">Create</a></li>
+          <li><a href="{% url 'people-list' %}">List</a></li>
+        </ul>
+      </li>
+
+      <li><a href="{% url 'people-image-list' %}">Uploaded Images</a></li>
+      <li><a href="{% url 'url-logger' %}">log url</a></li>
+      <li><a href="{% url 'admin:index' %}">Admin</a></li>
+
+    </ul>
+
+    <form id="search-navbar-form" class="navbar-form navbar-right">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="EXTERNAL Search" id="search-query" name="search-query">
+        <div class="input-group-btn">
+          <button id="navbar-search-btn" class="btn btn-default" type="button" onclick="externalsearch()">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+
+
+  </div>
+</nav>
+
+
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+
+<script type="text/javascript" src="{% static "starwarsapp/navbar/externalSearch/index.js" %}"></script>
+
+<script type="text/javascript" src="{% static "starwarsapp/urlLogger/silenced-url-logger.js" %}"></script>
+
+</body>
+</html>

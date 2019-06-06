@@ -1,0 +1,38 @@
+[
+  {
+    "name":"A New Hope",
+    "image": "",
+    "location":"1977-05-25"
+  },
+  {
+    "name":"The Empire Strikes Back",
+    "image": "",
+    "location":"1980-05-17"
+  },
+  {
+    "name":"Return of the Jedi",
+    "image": "",
+    "location":"Return of the Jedi"
+  },
+  {
+    "name":"The Phantom Menace",
+    "image": "",
+    "location":"1999-05-19"
+  },
+  {
+    "name":"Attack of the Clones",
+    "image": "",
+    "location":"2002-05-16"
+  },
+  {
+    "name":"Revenge of the Sith",
+    "image": "",
+    "location":"2005-05-19"
+  },
+  {
+    "name":"The Force Awakens",
+    "image": "",
+    "location":"2015-12-11"
+  }
+]
+

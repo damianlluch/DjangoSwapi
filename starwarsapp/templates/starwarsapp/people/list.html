@@ -1,0 +1,17 @@
+{% extends "starwarsapp/base.html" %}
+
+{% block title %}Starwars Characters{% endblock %}
+
+{% block content %}
+  <h1>Actors List</h1>
+
+<h1>Characters</h1>
+<ul>
+{% for people in people %}
+    <li>{{ people.name }} - {{ people.height }}
+    </li>
+{% empty %}
+    <li>No articles yet.</li>
+{% endfor %}
+</ul>
+{% endblock %}

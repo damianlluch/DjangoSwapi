@@ -1,0 +1,13 @@
+{% extends "starwarsapp/base.html" %}
+
+{% block title %}Images List{% endblock %}
+
+{% block content %}
+{% include "starwarsapp/home/soldier.html" %}
+  <h1>Character Images List</h1>
+<a href="{% url 'people-image-create' %}">UPLOAD A PICTURE</a>
+{% for image in images %}
+    <img src="{{ image.image.url }}" width="200" alt="...">
+{% empty %}
+{% endfor %}
+{% endblock %}

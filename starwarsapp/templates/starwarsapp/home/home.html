@@ -1,0 +1,13 @@
+{% extends "starwarsapp/base.html" %}
+{% load static %}
+
+{% block styles %}
+  <link rel='stylesheet' href='{% static "starwarsapp/style.css" %}'>
+{% endblock %}
+
+
+{% block content %}
+{% include "starwarsapp/home/machinebackground.html" %}
+{% include "starwarsapp/searchRecommends/search-recommends.html" %}
+{% include "starwarsapp/home/carrusel.html" %}
+{% endblock %}
