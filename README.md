@@ -1,7 +1,7 @@
 python 3.6
 Click en la imagen para ver un video interactuando con la web
 
-$ git clone https://github.com/elfelround/Django-Swapi.git
+$ git clone https://github.com/damianlluch/DjangoSwapi
 
 $ pip install pipenv
 
